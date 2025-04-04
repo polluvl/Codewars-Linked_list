@@ -11,9 +11,9 @@ def remove_duplicates(head):
         return None
     if temp.next == None:
         return head
-    while temp:
-        if temp.next:
-            if temp.data == temp.next.data:
-                temp.next = temp.next.next
-        temp = temp.next
+    while temp and temp.next:
+        if temp.data == temp.next.data:
+            temp.next = temp.next.next
+        else:
+            temp = temp.next
     return head
