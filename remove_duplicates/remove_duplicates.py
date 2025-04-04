@@ -9,8 +9,11 @@ def remove_duplicates(head):
     temp = head
     if not head:
         return None
-    while temp.next:
-        if temp.data == temp.next.data:
-            temp.next = temp.next.next
+    if temp.next == None:
+        return head
+    while temp:
+        if temp.next:
+            if temp.data == temp.next.data:
+                temp.next = temp.next.next
         temp = temp.next
     return head
