@@ -13,9 +13,9 @@ def push(head, data):
     if head is None:
         return Node(data)
     temp = head
-    head = data
+    head = Node(data)
     head.next = temp
-    return Node(None)
+    return head
 
 def build_one_two_three():
     node = Node(1)
